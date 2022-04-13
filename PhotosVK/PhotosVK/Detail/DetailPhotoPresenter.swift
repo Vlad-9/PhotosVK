@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 protocol IDetailPhotoPresenter {
-    func viewDidLoad()
     var models: [GalleryCellModel] { get }
     var indPth: IndexPath { get }
     func willDisplayCell(at indexPath: IndexPath, isPreview: Bool)
@@ -110,8 +109,5 @@ extension DetailPhotoPresenter: IDetailPhotoPresenter {
                 }
             }
         }
-    }
-    
-    func viewDidLoad() {
     }
 }

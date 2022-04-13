@@ -125,11 +125,9 @@ class DetailPhotoViewController: UIViewController {
     // MARK: - LifeCycle
 
     override func viewDidLoad() {
-
         dateFormatter.dateFormat = "d MMMM yyyy"
         setupUI()
         super.viewDidLoad()
-        presenter.viewDidLoad()
     }
 
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
@@ -195,9 +193,6 @@ extension DetailPhotoViewController: UICollectionViewDelegate {
             if !initialScrollForPreviews {
                 collectionView.scrollToItem(at: presenter.indPth, at: .centeredHorizontally, animated: false)
                 initialScrollForPreviews = true
-            }
-            do {
-                // presenter.willDisplayCell(at: indexPath, isPreview: true)
             }
         }
     }
