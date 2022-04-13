@@ -61,12 +61,17 @@ final class GalleryCollectionViewPresenter {
             self.view?.updateCell(at: indexPath)
         }
 
-        URLSession.shared.dataTask(with: url) { (data, _, _) in
+        URLSession.shared.dataTask(with: url) { (data, _, error) in
             if let data = data,
                let image = UIImage(data: data) {
                 self.models[indexPath.row].status = .image(image)
             } else {
                 self.models[indexPath.row].status = .failure
+            }
+            if let error = error {
+                DispatchQueue.main.async {
+                    self.view?.presentAlert(with: error.localizedDescription)
+                }
             }
 
             DispatchQueue.main.async {

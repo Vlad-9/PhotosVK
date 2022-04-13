@@ -21,7 +21,13 @@ final class GalleryViewController: UIViewController {
 
     let reuseIdentifier = "Cell"
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    func presentAlert(with message: String) {
+        let alert = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "ОК", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
 
+    }
     // MARK: - Initializers
 
     init(presenter: IGalleryCollectionViewPresenter) {

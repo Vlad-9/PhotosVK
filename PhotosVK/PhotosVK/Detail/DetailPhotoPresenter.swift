@@ -16,18 +16,18 @@ protocol IDetailPhotoPresenter {
 }
 
 class DetailPhotoPresenter {
-
+    
     // MARK: - Dependencies
-
+    
     weak var view: DetailPhotoViewController?
-
+    
     // MARK: - Properties
-
+    
     var models: [GalleryCellModel]
     var indPth: IndexPath
-
+    
     // MARK: - Initializers
-
+    
     init(models: [GalleryCellModel], indPth: IndexPath) {
         self.indPth = indPth
         var newModels: [GalleryCellModel] = []
@@ -38,7 +38,6 @@ class DetailPhotoPresenter {
                 date: model.date,
                 fullSizeLink: model.fullSizeLink
             ))
-
         }
         self.models = newModels
     }
@@ -47,20 +46,20 @@ class DetailPhotoPresenter {
 // MARK: - IDetailPhotoPresenter protocol
 
 extension DetailPhotoPresenter: IDetailPhotoPresenter {
-
+    
     private func loadImage(at indexPath: IndexPath, with url: URL, isPreview: Bool) {
-
+        
         if !isPreview {
             self.models[indexPath.row].status = .loading
         } else {
             self.models[indexPath.row].previewStatus = .loading
         }
-
+        
         DispatchQueue.main.async {
             self.view?.updateCell(at: indexPath)
         }
-
-        URLSession.shared.dataTask(with: url) { (data, _, _) in
+        
+        URLSession.shared.dataTask(with: url) { (data, _, error) in
             if let data = data,
                let image = UIImage(data: data) {
                 if !isPreview {
@@ -68,7 +67,7 @@ extension DetailPhotoPresenter: IDetailPhotoPresenter {
                 } else {
                     self.models[indexPath.row].previewStatus = .image(image)
                 }
-
+                
             } else {
                 if !isPreview {
                     self.models[indexPath.row].status = .failure
@@ -77,34 +76,42 @@ extension DetailPhotoPresenter: IDetailPhotoPresenter {
                 }
                 self.models[indexPath.row].status = .failure
             }
-
+            if let error = error {
+                DispatchQueue.main.async {
+                    self.view?.presentAlert(with: error.localizedDescription)
+                }
+            }
+            
             DispatchQueue.main.async {
                 self.view?.updateCell(at: indexPath)
             }
         }.resume()
     }
-
+    
     func willDisplayCell(at indexPath: IndexPath, isPreview: Bool) {
-//        print(models[indexPath.row].status)
+
         if !isPreview {
             switch models[indexPath.row].status {
             case .readyToLoad(let url):
                 loadImage(at: indexPath, with: url, isPreview: isPreview)
-
+                
             case .loading, .image(_), .failure:
                 break
             }
         } else {
-            switch models[indexPath.row].previewStatus {
-            case .readyToLoad(let url):
-                loadImage(at: indexPath, with: url, isPreview: isPreview)
-
-            case .loading, .image(_), .failure:
-                break
+            do {
+                switch models[indexPath.row].previewStatus {
+                case .readyToLoad(let url):
+                    
+                    loadImage(at: indexPath, with: url, isPreview: isPreview)
+                    
+                case .loading, .image(_), .failure:
+                    break
+                }
             }
         }
     }
-
+    
     func viewDidLoad() {
     }
 }

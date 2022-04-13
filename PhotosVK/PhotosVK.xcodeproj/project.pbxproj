@@ -28,7 +28,6 @@
 		F52954A727FE5F50000DD264 /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52954A627FE5F50000DD264 /* AuthPresenter.swift */; };
 		F52954A927FE5F5D000DD264 /* AuthAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52954A827FE5F5D000DD264 /* AuthAssembly.swift */; };
 		F52954AD27FE6AEE000DD264 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52954AB27FE6AED000DD264 /* AuthViewController.swift */; };
-		F52954AE27FE6AEE000DD264 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F52954AC27FE6AED000DD264 /* AuthViewController.xib */; };
 		F529550027FF5942000DD264 /* GalleryCollectionViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52954FF27FF5942000DD264 /* GalleryCollectionViewPresenter.swift */; };
 		F529550227FF5954000DD264 /* GalleryCollectionViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F529550127FF5954000DD264 /* GalleryCollectionViewAssembly.swift */; };
 		F529550527FF5EC8000DD264 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F529550327FF5EC8000DD264 /* GalleryCollectionViewCell.swift */; };
@@ -38,6 +37,7 @@
 		F54ED08328046B1200A12DC5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54ED08228046B1200A12DC5 /* NetworkService.swift */; };
 		F54ED08528046B3800A12DC5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54ED08428046B3800A12DC5 /* API.swift */; };
 		F54ED08728046B5200A12DC5 /* PhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54ED08628046B5200A12DC5 /* PhotoResponse.swift */; };
+		F5C603AB28067058006970EA /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5C603AD28067058006970EA /* AuthViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +87,6 @@
 		F52954A627FE5F50000DD264 /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
 		F52954A827FE5F5D000DD264 /* AuthAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAssembly.swift; sourceTree = "<group>"; };
 		F52954AB27FE6AED000DD264 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
-		F52954AC27FE6AED000DD264 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		F52954FF27FF5942000DD264 /* GalleryCollectionViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewPresenter.swift; sourceTree = "<group>"; };
 		F529550127FF5954000DD264 /* GalleryCollectionViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewAssembly.swift; sourceTree = "<group>"; };
 		F529550327FF5EC8000DD264 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -97,6 +96,9 @@
 		F54ED08228046B1200A12DC5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F54ED08428046B3800A12DC5 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		F54ED08628046B5200A12DC5 /* PhotoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResponse.swift; sourceTree = "<group>"; };
+		F5C603A928066E4A006970EA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F5C603AA28066FF0006970EA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F5C603AC28067058006970EA /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/AuthViewController.xib; sourceTree = "<group>"; };
 		FB5BC332A01C295EA270FC8A /* Pods-PhotosVK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotosVK.debug.xcconfig"; path = "Target Support Files/Pods-PhotosVK/Pods-PhotosVK.debug.xcconfig"; sourceTree = "<group>"; };
 		FE85736DE9ECAE777C7368EB /* Pods_PhotosVK_PhotosVKUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotosVK_PhotosVKUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -237,7 +239,7 @@
 				F52954A627FE5F50000DD264 /* AuthPresenter.swift */,
 				F525F95A2803A7420059F8A5 /* AuthService.swift */,
 				F52954AB27FE6AED000DD264 /* AuthViewController.swift */,
-				F52954AC27FE6AED000DD264 /* AuthViewController.xib */,
+				F5C603AD28067058006970EA /* AuthViewController.xib */,
 				F52954A827FE5F5D000DD264 /* AuthAssembly.swift */,
 			);
 			path = Auth;
@@ -348,6 +350,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = F5161E4227FDE1F9002946C8;
 			productRefGroup = F5161E4C27FDE1F9002946C8 /* Products */;
@@ -369,7 +372,7 @@
 				F529550627FF5EC8000DD264 /* GalleryCollectionViewCell.xib in Resources */,
 				F5161E5E27FDE1FC002946C8 /* LaunchScreen.storyboard in Resources */,
 				F5161E5B27FDE1FC002946C8 /* Assets.xcassets in Resources */,
-				F52954AE27FE6AEE000DD264 /* AuthViewController.xib in Resources */,
+				F5C603AB28067058006970EA /* AuthViewController.xib in Resources */,
 				F515A18528065A3600363346 /* DetailPhotoViewController.xib in Resources */,
 				F529550A27FF699B000DD264 /* GalleryViewController.xib in Resources */,
 				F515A16F2805F71300363346 /* DetailCollectionViewCell.xib in Resources */,
@@ -576,8 +579,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				F5161E5D27FDE1FC002946C8 /* Base */,
+				F5C603A928066E4A006970EA /* ru */,
+				F5C603AA28066FF0006970EA /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F5C603AD28067058006970EA /* AuthViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5C603AC28067058006970EA /* ru */,
+			);
+			name = AuthViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -587,6 +600,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -648,6 +662,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

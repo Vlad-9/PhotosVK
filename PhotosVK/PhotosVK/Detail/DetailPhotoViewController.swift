@@ -189,14 +189,16 @@ extension DetailPhotoViewController: UICollectionViewDelegate {
 
             }
             presenter.willDisplayCell(at: indexPath, isPreview: false)
-        } else {
+
+        } else if collectionView == self.collectionView2 {
             if !initialScrollForPreviews {
                 collectionView.scrollToItem(at: presenter.indPth, at: .centeredHorizontally, animated: false)
                 initialScrollForPreviews = true
             }
-            presenter.willDisplayCell(at: indexPath, isPreview: true)
+            do {
+                presenter.willDisplayCell(at: indexPath, isPreview: true)
+            }
         }
-
     }
 }
 
