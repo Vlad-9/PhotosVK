@@ -3,3 +3,5 @@
 "imageNotSaved" = "Ошибка сохранения";
 "authFail" = "Авторизация не удалась";
 "error" = "Ошибка";
+"shareErrorDescription" = "Ошибка при загрузке изображения";
+"shareErrorLoadingDescription" = "Дождитесь загрузки изображения перед сохранением";

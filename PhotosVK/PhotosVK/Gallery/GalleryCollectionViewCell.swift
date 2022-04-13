@@ -54,7 +54,7 @@ extension GalleryCollectionViewCell: IGalleryCollectionViewCell {
         case .failure:
             activityIndicator.stopAnimating()
             imageView.image = nil
-            backgroundColor = .systemRed
+            backgroundColor = .systemGray
         }
     }
 }

@@ -34,7 +34,7 @@ class DetailCollectionViewCell: UICollectionViewCell {
             case .failure:
                 activityIndicator.stopAnimating()
                 imageView.image = nil
-                backgroundColor = .systemRed
+                backgroundColor = .systemGray
             }
         } else {
             switch model.previewStatus {
@@ -57,7 +57,7 @@ class DetailCollectionViewCell: UICollectionViewCell {
             case .failure:
                 activityIndicator.stopAnimating()
                 imageView.image = nil
-                backgroundColor = .systemRed
+                backgroundColor = .systemGray
             }
         }
     }

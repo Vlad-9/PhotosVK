@@ -3,3 +3,5 @@
 "imageNotSaved" = "Saving error";
 "authFail" = "Authorization fail";
 "error" = "Error";
+"shareErrorDescription" = "Error while loading images";
+"shareErrorLoadingDescription" = "Wait for the image to load before saving";

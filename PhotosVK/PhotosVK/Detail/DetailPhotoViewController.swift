@@ -59,8 +59,10 @@ class DetailPhotoViewController: UIViewController {
 
         case .image(let image):
             imageToShare.append(image)
-        case .loading, .readyToLoad(_), .failure:
-            self.presentAlert(with: NSLocalizedString("error", comment: ""))
+        case .loading:  self.presentAlert(with: NSLocalizedString("shareErrorLoadingDescription", comment: ""))
+            return
+        case  .readyToLoad(_), .failure:
+            self.presentAlert(with: NSLocalizedString("shareErrorDescription", comment: ""))
             return
         }
 
@@ -196,7 +198,7 @@ extension DetailPhotoViewController: UICollectionViewDelegate {
                 initialScrollForPreviews = true
             }
             do {
-                presenter.willDisplayCell(at: indexPath, isPreview: true)
+                // presenter.willDisplayCell(at: indexPath, isPreview: true)
             }
         }
     }
@@ -217,6 +219,7 @@ extension DetailPhotoViewController: UICollectionViewDataSource {
             cell.configure(with: presenter.models[indexPath.row], isPreview: false)
 
         } else {
+            presenter.willDisplayCell(at: indexPath, isPreview: true)
             cell.configure(with: presenter.models[indexPath.row], isPreview: true)
         }
         return cell
