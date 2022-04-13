@@ -1,0 +1,5 @@
+"exit" = "Log out";
+"imageSaved" = "Image saved";
+"imageNotSaved" = "Saving error";
+"authFail" = "Authorization fail";
+"error" = "Error";

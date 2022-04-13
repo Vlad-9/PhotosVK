@@ -12,9 +12,8 @@
 		CDFE50FB48BCA5209FC4963D /* Pods_PhotosVKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C47A56142C31BC35FD77033 /* Pods_PhotosVKTests.framework */; };
 		F515A16E2805F71300363346 /* DetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F515A16C2805F71300363346 /* DetailCollectionViewCell.swift */; };
 		F515A16F2805F71300363346 /* DetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F515A16D2805F71300363346 /* DetailCollectionViewCell.xib */; };
-		F515A18328065A3600363346 /* DetailPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F515A17F28065A3200363346 /* DetailPhotoViewController.swift */; };
+		F515A18328065A3600363346 /* ha.swift in Sources */ = {isa = PBXBuildFile; fileRef = F515A17F28065A3200363346 /* ha.swift */; };
 		F515A18428065A3600363346 /* DetailPhotoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F515A18028065A3300363346 /* DetailPhotoPresenter.swift */; };
-		F515A18528065A3600363346 /* DetailPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F515A18128065A3300363346 /* DetailPhotoViewController.xib */; };
 		F515A18628065A3600363346 /* DetailPhotoAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F515A18228065A3300363346 /* DetailPhotoAssembly.swift */; };
 		F5161E4F27FDE1F9002946C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5161E4E27FDE1F9002946C8 /* AppDelegate.swift */; };
 		F5161E5127FDE1F9002946C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5161E5027FDE1F9002946C8 /* SceneDelegate.swift */; };
@@ -38,6 +37,8 @@
 		F54ED08528046B3800A12DC5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54ED08428046B3800A12DC5 /* API.swift */; };
 		F54ED08728046B5200A12DC5 /* PhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54ED08628046B5200A12DC5 /* PhotoResponse.swift */; };
 		F5C603AB28067058006970EA /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5C603AD28067058006970EA /* AuthViewController.xib */; };
+		F5C603B428067372006970EA /* DetailPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5C603B628067372006970EA /* DetailPhotoViewController.xib */; };
+		F5C603BD2806743A006970EA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5C603BF2806743A006970EA /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,9 +68,8 @@
 		EC00C5FD14BB2E4B9C1D0E51 /* Pods-PhotosVK-PhotosVKUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotosVK-PhotosVKUITests.release.xcconfig"; path = "Target Support Files/Pods-PhotosVK-PhotosVKUITests/Pods-PhotosVK-PhotosVKUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F515A16C2805F71300363346 /* DetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		F515A16D2805F71300363346 /* DetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCollectionViewCell.xib; sourceTree = "<group>"; };
-		F515A17F28065A3200363346 /* DetailPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPhotoViewController.swift; sourceTree = "<group>"; };
+		F515A17F28065A3200363346 /* ha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ha.swift; sourceTree = "<group>"; };
 		F515A18028065A3300363346 /* DetailPhotoPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPhotoPresenter.swift; sourceTree = "<group>"; };
-		F515A18128065A3300363346 /* DetailPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailPhotoViewController.xib; sourceTree = "<group>"; };
 		F515A18228065A3300363346 /* DetailPhotoAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPhotoAssembly.swift; sourceTree = "<group>"; };
 		F5161E4B27FDE1F9002946C8 /* PhotosVK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotosVK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5161E4E27FDE1F9002946C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,7 +98,12 @@
 		F54ED08628046B5200A12DC5 /* PhotoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResponse.swift; sourceTree = "<group>"; };
 		F5C603A928066E4A006970EA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F5C603AA28066FF0006970EA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		F5C603AC28067058006970EA /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/AuthViewController.xib; sourceTree = "<group>"; };
+		F5C603B0280671B0006970EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AuthViewController.xib; sourceTree = "<group>"; };
+		F5C603B228067224006970EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AuthViewController.strings; sourceTree = "<group>"; };
+		F5C603B328067242006970EA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/AuthViewController.strings; sourceTree = "<group>"; };
+		F5C603BA28067395006970EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/DetailPhotoViewController.xib; sourceTree = "<group>"; };
+		F5C603BE2806743A006970EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F5C603C02806743C006970EA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FB5BC332A01C295EA270FC8A /* Pods-PhotosVK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotosVK.debug.xcconfig"; path = "Target Support Files/Pods-PhotosVK/Pods-PhotosVK.debug.xcconfig"; sourceTree = "<group>"; };
 		FE85736DE9ECAE777C7368EB /* Pods_PhotosVK_PhotosVKUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotosVK_PhotosVKUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -169,8 +174,8 @@
 			children = (
 				F515A18228065A3300363346 /* DetailPhotoAssembly.swift */,
 				F515A18028065A3300363346 /* DetailPhotoPresenter.swift */,
-				F515A17F28065A3200363346 /* DetailPhotoViewController.swift */,
-				F515A18128065A3300363346 /* DetailPhotoViewController.xib */,
+				F515A17F28065A3200363346 /* ha.swift */,
+				F5C603B628067372006970EA /* DetailPhotoViewController.xib */,
 				F515A16C2805F71300363346 /* DetailCollectionViewCell.swift */,
 				F515A16D2805F71300363346 /* DetailCollectionViewCell.xib */,
 			);
@@ -212,6 +217,7 @@
 				F5161E5C27FDE1FC002946C8 /* LaunchScreen.storyboard */,
 				F5161E5F27FDE1FD002946C8 /* Info.plist */,
 				F5161E5727FDE1F9002946C8 /* PhotosVK.xcdatamodeld */,
+				F5C603BF2806743A006970EA /* Localizable.strings */,
 			);
 			path = PhotosVK;
 			sourceTree = "<group>";
@@ -373,7 +379,8 @@
 				F5161E5E27FDE1FC002946C8 /* LaunchScreen.storyboard in Resources */,
 				F5161E5B27FDE1FC002946C8 /* Assets.xcassets in Resources */,
 				F5C603AB28067058006970EA /* AuthViewController.xib in Resources */,
-				F515A18528065A3600363346 /* DetailPhotoViewController.xib in Resources */,
+				F5C603B428067372006970EA /* DetailPhotoViewController.xib in Resources */,
+				F5C603BD2806743A006970EA /* Localizable.strings in Resources */,
 				F529550A27FF699B000DD264 /* GalleryViewController.xib in Resources */,
 				F515A16F2805F71300363346 /* DetailCollectionViewCell.xib in Resources */,
 			);
@@ -535,7 +542,7 @@
 				F5161E5927FDE1F9002946C8 /* PhotosVK.xcdatamodeld in Sources */,
 				F52954AD27FE6AEE000DD264 /* AuthViewController.swift in Sources */,
 				F529550227FF5954000DD264 /* GalleryCollectionViewAssembly.swift in Sources */,
-				F515A18328065A3600363346 /* DetailPhotoViewController.swift in Sources */,
+				F515A18328065A3600363346 /* ha.swift in Sources */,
 				F529550027FF5942000DD264 /* GalleryCollectionViewPresenter.swift in Sources */,
 				F52954A927FE5F5D000DD264 /* AuthAssembly.swift in Sources */,
 				F515A16E2805F71300363346 /* DetailCollectionViewCell.swift in Sources */,
@@ -588,9 +595,28 @@
 		F5C603AD28067058006970EA /* AuthViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F5C603AC28067058006970EA /* ru */,
+				F5C603B0280671B0006970EA /* Base */,
+				F5C603B228067224006970EA /* en */,
+				F5C603B328067242006970EA /* ru */,
 			);
 			name = AuthViewController.xib;
+			sourceTree = "<group>";
+		};
+		F5C603B628067372006970EA /* DetailPhotoViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5C603BA28067395006970EA /* Base */,
+			);
+			name = DetailPhotoViewController.xib;
+			sourceTree = "<group>";
+		};
+		F5C603BF2806743A006970EA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5C603BE2806743A006970EA /* en */,
+				F5C603C02806743C006970EA /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

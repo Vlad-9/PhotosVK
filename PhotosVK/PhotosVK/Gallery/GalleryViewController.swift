@@ -21,7 +21,7 @@ final class GalleryViewController: UIViewController {
 
     let reuseIdentifier = "Cell"
     @IBOutlet weak var collectionView: UICollectionView!
-    
+
     func presentAlert(with message: String) {
         let alert = UIAlertController(title: message, message: nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "ОК", style: .default, handler: nil))
@@ -47,7 +47,7 @@ final class GalleryViewController: UIViewController {
     }
 
     private func setNavigationBarUI() {
-        let exitButton = UIBarButtonItem(title: "Выход",
+        let exitButton = UIBarButtonItem(title: NSLocalizedString("exit", comment: ""),
                                          style: .plain,
                                          target: self,
                                          action: #selector(userLogOut))

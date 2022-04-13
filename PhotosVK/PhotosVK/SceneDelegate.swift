@@ -32,7 +32,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, AuthServiceDelegate {
     }
 
     func failedAuth() {
-        let alert = UIAlertController(title: "Ошибка", message: "Авторизация не удалась", preferredStyle: .alert)
+        let alert = UIAlertController(title: NSLocalizedString("error", comment: ""), message: NSLocalizedString("authFail", comment: ""), preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "ОК", style: .default, handler: nil))
         self.window?.rootViewController?.present(alert, animated: true, completion: nil)
     }

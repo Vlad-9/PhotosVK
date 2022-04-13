@@ -60,7 +60,7 @@ class DetailPhotoViewController: UIViewController {
         case .image(let image):
             imageToShare.append(image)
         case .loading, .readyToLoad(_), .failure:
-            self.presentAlert(with: "Ошибка")
+            self.presentAlert(with: NSLocalizedString("error", comment: ""))
             return
         }
 
@@ -70,13 +70,13 @@ class DetailPhotoViewController: UIViewController {
         activityViewController.popoverPresentationController?.sourceView = self.view
         activityViewController.completionWithItemsHandler = {_, completed, _, error in
             if !completed {
-                self.presentAlert(with: "Ошибка сохранения")
+                self.presentAlert(with: NSLocalizedString("imageNotSaved", comment: ""))
                 return
             }
             if let error = error {
                 self.presentAlert(with: error.localizedDescription)
             }
-            self.presentAlert(with: "Изображение сохранено")
+            self.presentAlert(with: NSLocalizedString("imageSaved", comment: ""))
         }
 
         self.present(activityViewController, animated: true, completion: nil)
@@ -124,7 +124,7 @@ class DetailPhotoViewController: UIViewController {
     // MARK: - LifeCycle
 
     override func viewDidLoad() {
-        dateFormatter.locale =  Locale(identifier: "ru_RU")
+
         dateFormatter.dateFormat = "d MMMM yyyy"
         setupUI()
         super.viewDidLoad()
@@ -225,4 +225,10 @@ extension DetailPhotoViewController: UICollectionViewDataSource {
                         numberOfItemsInSection section: Int) -> Int {
         return presenter.models.count
     }
+}
+
+extension Date {
+  var localizedStringTime: String {
+    return DateFormatter.localizedString(from: self, dateStyle: .none, timeStyle: .short)
+  }
 }
