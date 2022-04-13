@@ -94,7 +94,6 @@ class DetailPhotoViewController: UIViewController {
         let backButton = UIBarButtonItem()
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         self.navigationController?.navigationBar.tintColor = .black
-
     }
 
     private func makeLayoutForCollectionView() -> UICollectionViewFlowLayout {
