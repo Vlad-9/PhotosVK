@@ -196,6 +196,7 @@ extension DetailPhotoViewController: UICollectionViewDelegate {
             }
             presenter.willDisplayCell(at: indexPath, isPreview: true)
         }
+
     }
 }
 

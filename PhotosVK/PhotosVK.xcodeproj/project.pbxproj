@@ -29,7 +29,6 @@
 		F52954A927FE5F5D000DD264 /* AuthAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52954A827FE5F5D000DD264 /* AuthAssembly.swift */; };
 		F52954AD27FE6AEE000DD264 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52954AB27FE6AED000DD264 /* AuthViewController.swift */; };
 		F52954AE27FE6AEE000DD264 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F52954AC27FE6AED000DD264 /* AuthViewController.xib */; };
-		F52954F527FF1B6A000DD264 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = F52954F427FF1B6A000DD264 /* .swiftlint.yml */; };
 		F529550027FF5942000DD264 /* GalleryCollectionViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52954FF27FF5942000DD264 /* GalleryCollectionViewPresenter.swift */; };
 		F529550227FF5954000DD264 /* GalleryCollectionViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F529550127FF5954000DD264 /* GalleryCollectionViewAssembly.swift */; };
 		F529550527FF5EC8000DD264 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F529550327FF5EC8000DD264 /* GalleryCollectionViewCell.swift */; };
@@ -89,7 +88,6 @@
 		F52954A827FE5F5D000DD264 /* AuthAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAssembly.swift; sourceTree = "<group>"; };
 		F52954AB27FE6AED000DD264 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		F52954AC27FE6AED000DD264 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
-		F52954F427FF1B6A000DD264 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		F52954FF27FF5942000DD264 /* GalleryCollectionViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewPresenter.swift; sourceTree = "<group>"; };
 		F529550127FF5954000DD264 /* GalleryCollectionViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewAssembly.swift; sourceTree = "<group>"; };
 		F529550327FF5EC8000DD264 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 		F5161E4227FDE1F9002946C8 = {
 			isa = PBXGroup;
 			children = (
-				F52954F427FF1B6A000DD264 /* .swiftlint.yml */,
 				F5161E4D27FDE1F9002946C8 /* PhotosVK */,
 				F5161E6727FDE1FD002946C8 /* PhotosVKTests */,
 				F5161E7127FDE1FD002946C8 /* PhotosVKUITests */,
@@ -369,7 +366,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F52954F527FF1B6A000DD264 /* .swiftlint.yml in Resources */,
 				F529550627FF5EC8000DD264 /* GalleryCollectionViewCell.xib in Resources */,
 				F5161E5E27FDE1FC002946C8 /* LaunchScreen.storyboard in Resources */,
 				F5161E5B27FDE1FC002946C8 /* Assets.xcassets in Resources */,
@@ -512,7 +508,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n  exit 1\nfi\n";
+			shellScript = "
+";
 		};
 /* End PBXShellScriptBuildPhase section */
 
